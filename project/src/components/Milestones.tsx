@@ -17,62 +17,61 @@ const Milestones = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
-      <div className="container mx-auto px-4">
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Our Milestone</h2>
+    <section className="py-12 md:py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="mb-10 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2 md:mb-4">Our Milestone</h2>
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto mb-12">
           {milestones.map((milestone, index) => (
-            <Card 
-              key={index} 
-              className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 bg-white/90 backdrop-blur-sm rounded-3xl overflow-hidden group hover:scale-105"
+            <Card
+              key={index}
+              className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 bg-white/90 backdrop-blur-sm rounded-xl md:rounded-3xl overflow-hidden group hover:scale-105"
             >
               <div className="relative">
-                <div className="aspect-[16/9] overflow-hidden">
-                  <img 
-                    src={milestone.image} 
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={milestone.image}
                     alt={milestone.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
-                
-                <CardContent className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                  <div className="space-y-2">
-                    <h3 className="text-3xl font-bold">{milestone.title}</h3>
-                    <h4 className="text-2xl font-semibold opacity-90">{milestone.subtitle}</h4>
+
+                <CardContent className="absolute bottom-0 left-0 right-0 p-4 md:p-8 text-white">
+                  <div className="space-y-1 md:space-y-2">
+                    <h3 className="text-xl md:text-3xl font-bold">{milestone.title}</h3>
+                    <h4 className="text-lg md:text-2xl font-semibold opacity-90">{milestone.subtitle}</h4>
                   </div>
                 </CardContent>
               </div>
-              
-              <CardContent className="p-8">
-                <p className="text-muted-foreground leading-relaxed">
+
+              <CardContent className="p-4 md:p-8">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   {milestone.description}
                 </p>
               </CardContent>
             </Card>
           ))}
         </div>
-        
-        {/* Additional stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mt-10 md:mt-16 max-w-4xl mx-auto">
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">95%</div>
-            <div className="text-muted-foreground">Success Rate</div>
+            <div className="text-2xl md:text-4xl font-bold text-primary mb-1 md:mb-2">95%</div>
+            <div className="text-xs md:text-base text-muted-foreground">Success Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">50+</div>
-            <div className="text-muted-foreground">Expert Instructors</div>
+            <div className="text-2xl md:text-4xl font-bold text-primary mb-1 md:mb-2">50+</div>
+            <div className="text-xs md:text-base text-muted-foreground">Expert Instructors</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">200+</div>
-            <div className="text-muted-foreground">Courses Available</div>
+            <div className="text-2xl md:text-4xl font-bold text-primary mb-1 md:mb-2">200+</div>
+            <div className="text-xs md:text-base text-muted-foreground">Courses Available</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-            <div className="text-muted-foreground">Support Available</div>
+            <div className="text-2xl md:text-4xl font-bold text-primary mb-1 md:mb-2">24/7</div>
+            <div className="text-xs md:text-base text-muted-foreground">Support Available</div>
           </div>
         </div>
       </div>

@@ -29,29 +29,29 @@ const Events = () => {
   ];
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Events</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+    <section className="py-12 md:py-16 bg-background">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">Events</h2>
+          <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2">
             Join us in our exciting events that celebrate learning and achievement
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {events.map((event, index) => (
-            <Card key={index} className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+            <Card key={index} className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 h-full flex flex-col">
+              <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
                 <div className="text-center text-primary">
-                  <div className="text-4xl mb-2">📚</div>
-                  <div className="text-sm font-medium">Event Image</div>
+                  <div className="text-3xl md:text-4xl mb-2">📚</div>
+                  <div className="text-xs md:text-sm font-medium">Event Image</div>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <div className="space-y-2">
-                  <h3 className="font-semibold text-lg">{event.title}</h3>
-                  <p className="text-primary text-sm font-medium">{event.date}</p>
-                  <p className="text-muted-foreground text-sm">{event.description}</p>
+              <CardContent className="p-4 md:p-6 flex-1 flex flex-col justify-between">
+                <div className="space-y-1 md:space-y-2">
+                  <h3 className="font-semibold text-base md:text-lg">{event.title}</h3>
+                  <p className="text-primary text-xs md:text-sm font-medium">{event.date}</p>
+                  <p className="text-muted-foreground text-xs md:text-sm">{event.description}</p>
                 </div>
               </CardContent>
             </Card>
